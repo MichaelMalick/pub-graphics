@@ -1,7 +1,6 @@
 
 
 
-
 ## Plot 1
 fit1   <- lm(mpg ~ hp, data = mtcars)
 pred.x1 <- seq(min(mtcars$hp), max(mtcars$hp), 0.1)
