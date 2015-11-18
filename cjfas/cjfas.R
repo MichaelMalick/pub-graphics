@@ -8,12 +8,12 @@ types  <- read.csv("cjfas-types.csv", stringsAsFactors = FALSE)
 
 par(mar = c(4,6,1,1))
 barplot(types$count,
-        horiz = TRUE,
+        horiz     = TRUE,
         names.arg = types$type,
-        border = "white",
-        las = 1,
-        xlab = "Count",
-        axes = FALSE)
+        border    = "white",
+        las       = 1,
+        xlab      = "Count",
+        axes      = FALSE)
     axis(1, lwd = 1, lwd.tick = 1, col = "grey50")
 
 
@@ -24,13 +24,13 @@ nme <- c("total", "multi-panel", "multi-type")
 multi <- data.frame(name = nme, count = cnt)
 par(mar = c(4,6,1,1))
 barplot(multi$count,
-        horiz = TRUE,
+        horiz     = TRUE,
         names.arg = multi$name,
-        border = "white",
-        las = 1,
-        xlim = c(0, 60),
-        xlab = "Count",
-        axes = FALSE)
+        border    = "white",
+        las       = 1,
+        xlim      = c(0, 60),
+        xlab      = "Count",
+        axes      = FALSE)
     axis(1, lwd = 1, lwd.tick = 1, col = "grey50")
 
 
