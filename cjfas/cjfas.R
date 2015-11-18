@@ -16,11 +16,11 @@ barplot(types$count,
         axes      = FALSE)
     axis(1, lwd = 1, lwd.tick = 1, col = "grey50")
 
+n.single <- sum(counts$figures) - sum(counts$multipanel)
+n.multi <- sum(counts$figures) - n.multi
 
-cnt <- c(sum(counts$figures),
-    sum(counts$multipanel),
-    sum(counts$multitype))
-nme <- c("total", "multi-panel", "multi-type")
+cnt <- c(n.single, n.multi, sum(counts$multitype))
+nme <- c("single", "multi-panel", "multi-type")
 multi <- data.frame(name = nme, count = cnt)
 par(mar = c(4,6,1,1))
 barplot(multi$count,
@@ -28,7 +28,7 @@ barplot(multi$count,
         names.arg = multi$name,
         border    = "white",
         las       = 1,
-        xlim      = c(0, 60),
+        xlim      = c(0, 30),
         xlab      = "Count",
         axes      = FALSE)
     axis(1, lwd = 1, lwd.tick = 1, col = "grey50")
