@@ -28,17 +28,17 @@ dev.new(width = 5, height = 3.09)
 
 ## Set graphical parameters
 par(
-    mar  = c(2.3, 0.3, 0.0, 0.0), # (bottom, left, top, right)
-    oma  = c(2.0, 4.2, 0.5, 0.5),
+    mar = c(4, 4, 0.5, 0.5), # (bottom, left, top, right)
     ps   = 12,
-    lend = 2,
     cex.axis = 0.9)
 
 ## Setup empty graphic
 plot(x = 1950:2013, y = npgo.avg$npgo, 
      type = "n", 
      ylim = c(-3, 3),
-     axes = FALSE)
+     axes = FALSE,
+     ylab = "",
+     xlab = "")
 
 ## Add axes
 axis(1, lwd = 0, lwd.tick = 1, col = "grey50")
@@ -50,10 +50,10 @@ abline(h = 0, col = "grey50", lty = 2, lwd = 0.8)
 
 ## Add monthly time series
 for(i in 1:12) 
-    lines(x = 1950:2013, y = npgo$npgo[npgo$month == i], col = "grey70")
+    lines(x = unique(npgo$year), y = npgo$npgo[npgo$month == i], col = "grey70")
 
 ## Add annual average
-lines(x = 1950:2013, y = npgo.avg$npgo, col = "black", lwd = 2)
+lines(x = npgo.avg$year, y = npgo.avg$npgo, col = "black", lwd = 2)
 
 ## Add axis labels
 mtext("Year", side = 1, line = 2.75)

@@ -25,23 +25,12 @@ head(npgo.avg)
 
 
 ## 1. Set graphics dimensions (w = 5, h = 3.09, r = 1.618)
-
 ## 2. Set graphical parameters (bottom, left, top, right)
-
 ## 3. Setup empty graphic
-
 ## 4. Add axes
-
 ## 5. Add reference line
-
 ## 6. Add monthly time series
-
 ## 7. Add annual average
-
 ## 8. Add axis labels
-
 ## 9. Add legend
-
-
-
 
